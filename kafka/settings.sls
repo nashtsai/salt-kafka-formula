@@ -11,7 +11,9 @@
 
 {%- set version_name = 'kafka_' + scala_version + '-' + version %}
 {%- set real_home    = prefix + '_' + scala_version + '-' + version %}
-{%- set default_url  = 'http://www.mirrorservice.org/sites/ftp.apache.org/kafka/' + version + '/' + version_name + '.tgz' %}
+# {%- set default_url  = 'http://www.mirrorservice.org/sites/ftp.apache.org/kafka/' + version + '/' + version_name + '.tgz' %}
+# http://mirrors.cnnic.cn/apache/kafka/0.8.1.1/kafka_2.10-0.8.1.1.tgz
+{%- set default_url  = 'http://mirrors.cnnic.cn/apache/kafka/' + version + '/' + version_name + '.tgz' %}
 {%- set source_url   = g.get('source_url', p.get('source_url', default_url)) %}
 
 # bind_address is only supported as a grain, because it has to be host-specific
